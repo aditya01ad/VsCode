@@ -1,0 +1,21 @@
+Graph 0 with 7 vertices and 6 edges
+Edges: [(0, 6, None), (1, 6, None), (2, 6, None), (3, 6, None), (4, 6, None), (5, 6, None)]
+
+Adjacency Matrix:
+[0 0 0 0 0 0 1]
+[0 0 0 0 0 0 1]
+[0 0 0 0 0 0 1]
+[0 0 0 0 0 0 1]
+[0 0 0 0 0 0 1]
+[0 0 0 0 0 0 1]
+[1 1 1 1 1 1 0]
+
+Degree sequence:
+[6, 1, 1, 1, 1, 1, 1]
+
+Adjacency Spectrum:
+[2.449489742783178?, 0, 0, 0, 0, 0, -2.449489742783178?]
+
+Laplacian Spectrum:
+[7, 1, 1, 1, 1, 1, 0]
+

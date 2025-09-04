@@ -1,0 +1,12 @@
+Graph 4 with 5 vertices and 4 edges
+Edges: [(0, 2, None), (0, 4, None), (1, 3, None), (1, 4, None)]
+
+Adjacency Matrix:
+[0 0 1 0 1]
+[0 0 0 1 1]
+[1 0 0 0 0]
+[0 1 0 0 0]
+[1 1 0 0 0]
+
+Adjacency Spectrum (eigenvalues with multiplicity):
+[1.732050807568878?, 1, 0, -1, -1.732050807568878?]

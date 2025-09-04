@@ -1,0 +1,21 @@
+Graph 32 with 7 vertices and 6 edges
+Edges: [(0, 4, None), (0, 5, None), (0, 6, None), (4, 5, None), (4, 6, None), (5, 6, None)]
+
+Adjacency Matrix:
+[0 0 0 0 1 1 1]
+[0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0]
+[1 0 0 0 0 1 1]
+[1 0 0 0 1 0 1]
+[1 0 0 0 1 1 0]
+
+Degree sequence:
+[3, 3, 3, 3, 0, 0, 0]
+
+Adjacency Spectrum:
+[3, 0, 0, 0, -1, -1, -1]
+
+Laplacian Spectrum:
+[4, 4, 4, 0, 0, 0, 0]
+

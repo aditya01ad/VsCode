@@ -1,0 +1,21 @@
+Graph 14 with 7 vertices and 6 edges
+Edges: [(0, 4, None), (0, 6, None), (1, 5, None), (1, 6, None), (4, 6, None), (5, 6, None)]
+
+Adjacency Matrix:
+[0 0 0 0 1 0 1]
+[0 0 0 0 0 1 1]
+[0 0 0 0 0 0 0]
+[0 0 0 0 0 0 0]
+[1 0 0 0 0 0 1]
+[0 1 0 0 0 0 1]
+[1 1 0 0 1 1 0]
+
+Degree sequence:
+[4, 2, 2, 2, 2, 0, 0]
+
+Adjacency Spectrum:
+[2.561552812808830?, 1, 0, 0, -1, -1, -1.561552812808831?]
+
+Laplacian Spectrum:
+[5, 3, 3, 1, 0, 0, 0]
+

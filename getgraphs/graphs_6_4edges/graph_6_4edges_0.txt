@@ -1,0 +1,21 @@
+Graph 0 with 6 vertices and 4 edges
+Edges: [(0, 5, None), (1, 5, None), (2, 5, None), (3, 5, None)]
+
+Adjacency Matrix:
+[0 0 0 0 0 1]
+[0 0 0 0 0 1]
+[0 0 0 0 0 1]
+[0 0 0 0 0 1]
+[0 0 0 0 0 0]
+[1 1 1 1 0 0]
+
+Degree sequence:
+[4, 1, 1, 1, 1, 0]
+
+Adjacency Spectrum:
+[2, 0, 0, 0, 0, -2]
+
+Laplacian Spectrum:
+[5, 1, 1, 1, 0, 0]
+
+Signless Laplacian Spectrum:

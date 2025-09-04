@@ -1,0 +1,21 @@
+Graph 13 with 7 vertices and 6 edges
+Edges: [(0, 4, None), (0, 6, None), (1, 5, None), (2, 6, None), (3, 6, None), (4, 6, None)]
+
+Adjacency Matrix:
+[0 0 0 0 1 0 1]
+[0 0 0 0 0 1 0]
+[0 0 0 0 0 0 1]
+[0 0 0 0 0 0 1]
+[1 0 0 0 0 0 1]
+[0 1 0 0 0 0 0]
+[1 0 1 1 1 0 0]
+
+Degree sequence:
+[4, 2, 2, 1, 1, 1, 1]
+
+Adjacency Spectrum:
+[2.342923082777170?, 1, 0.4706834198711606?, 0, -1, -1, -1.813606502648331?]
+
+Laplacian Spectrum:
+[5, 3, 2, 1, 1, 0, 0]
+
