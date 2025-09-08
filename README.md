@@ -36,8 +36,11 @@ This repository contains scripts for generating, analyzing, and visualizing grap
 
 For Python scripts:
 python drawgraph_1.py
+python graph_products.py
+For SageMath scripts, use the SageMath environment :
+sage draw_graphs.sage
 
-For SageMath scripts, use the SageMath environment.
+On Windows, you can use WSL and install SageMath.
 
 
 
