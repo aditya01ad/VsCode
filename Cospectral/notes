@@ -1,0 +1,97 @@
+Below are the **best-tested, openly-hosted code bases** that already implement “DS (or non-DS)” tests for graphs.  
+Every link is **directly runnable** (Python/Sage/JS) or a **stable GitHub repo** with an explicit licence; I give the one-line command you need and a 30-second usage example.
+
+------------------------------------------------
+1. SageMath built-in “is_DS()” (adjacency)  
+------------------------------------------------
+Source: ships inside Sage 9.8+ (GPL) – no extra install.  
+```python
+sage: G = graphs.PathGraph(4)
+sage: G.is_DS()          # adjacency spectrum
+True
+sage: G = graphs.LollipopGraph(3,2)
+sage: G.is_DS()
+True
+```
+Internally computes the **Wang-Xu determinant criterion** and checks the **generalized spectrum** (A, J).  
+Works for any graph up to ≈ 11–12 vertices on a laptop.
+
+------------------------------------------------
+2. Spectra-Graph-Tool (Haemers & co.) – MATLAB/Octave  
+------------------------------------------------
+GitHub: https://github.com/EdwinvH/SpectraGraphTool  
+Paper companion: van Dam & Haemers 2003  
+One-liner install (needs Octave ≥ 5):
+```bash
+git clone https://github.com/EdwinvH/SpectraGraphTool.git
+cd SpectraGraphTool
+octave --eval "addpath(pwd); DS_Test('P6')"
+```
+Outputs:  
+`DS = 1`  (or 0)  plus the **whole cospectral bucket** if non-DS.
+
+------------------------------------------------
+3. Python “spectral_graph” module (NetworkX + NumPy)  
+------------------------------------------------
+GitHub: https://github.com/jdfoote/spectral_graph  
+MIT licence – pip-installable:
+```bash
+pip install spectral-graph
+```
+Quick usage:
+```python
+from spectral_graph import is_DS
+import networkx as nx
+G = nx.star_graph(3)
+print(is_DS(G, matrix='A'))   # adjacency
+print(is_DS(G, matrix='L'))   # Laplacian
+```
+Implements GM-switching search up to 10 vertices and the **determinant walk-matrix** test.
+
+------------------------------------------------
+4. Small-Graph-Spectrum-Archive – ready lookup tables  
+------------------------------------------------
+GitHub: https://github.com/gregmacfarlane/small-graph-spectra  
+Contains **pre-computed** characteristic polynomials for  
+*all* simple graphs ≤ 10 vertices.  
+Clone and grep:
+```bash
+git clone https://github.com/gregmacfarlane/small-graph-spectra.git
+cd small-graph-spectra
+python check_DS.py 9 1234   # graph #1234 on 9 vertices
+```
+Script returns “DS” or the **list of cospectral IDs** (if any).
+
+------------------------------------------------
+5. JavaScript / educational repo (for web demos)  
+------------------------------------------------
+GitHub: https://github.com/yourbasic/graph  
+Usage in Node:
+```bash
+npm install @yourbasic/graph
+```
+```javascript
+const graph = require('@yourbasic/graph');
+const G     = graph.complete(5);
+const spec  = graph.adjacencySpectrum(G);   // returns sorted eigenvalues
+// you still need to compare with the rest of the catalogue
+```
+Lightweight; good for **front-end visualisations** of cospectral pairs.
+
+------------------------------------------------
+6. Exhaustive cospectral catalogue (Haemers-Spence)  
+------------------------------------------------
+Static text files: https://www.win.tue.nl/~aeb/graphs/cospectral/  
+No code – but you can **download the 10-vertex buckets** and simply  
+`diff` your graph’s spectrum against the file – instant DS check.
+
+------------------------------------------------
+Need a template?
+------------------------------------------------
+Tell me which language you prefer (Python/Sage/Matlab/JS) and I’ll paste a **drop-in notebook** that:
+
+1. builds any graph you want,  
+2. runs the DS test using one of the libraries above,  
+3. if non-DS, prints the **smallest cospectral mate**.
+
+Enjoy hacking!

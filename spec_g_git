@@ -1,0 +1,4 @@
+const graph = require('@yourbasic/graph');
+const G     = graph.complete(5);
+const spec  = graph.adjacencySpectrum(G);   // returns sorted eigenvalues
+// you still need to compare with the rest of the catalogue

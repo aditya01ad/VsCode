@@ -11,7 +11,7 @@ def adjacency_spectrum(G):
 
 # Helper: normalized Laplacian spectrum
 def norm_laplacian_spectrum(G):
-    L = nx.normalized_laplacian_matrix(G).toarray()
+    L = nx.normalized_laplacian_matrix(G).toarray() # .A is deprecated, use .toarray()
     return np.sort(np.real(eigvals(L)))
 
 
